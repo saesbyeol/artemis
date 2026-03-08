@@ -105,7 +105,7 @@ export function Navbar() {
             initial={{ height: 0, opacity: 0 }}
             animate={{ height: "auto", opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}
-            transition={{ duration: 0.3, ease: [0.25, 0.1, 0.25, 1] }}
+            transition={{ duration: 0.3, ease: [0.25, 0.1, 0.25, 1] as const }}
             className="overflow-hidden border-b border-graphite-200/60 glass lg:hidden"
           >
             <div className="mx-auto flex max-w-7xl flex-col gap-1 px-6 pb-6 pt-2">

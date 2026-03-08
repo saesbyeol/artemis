@@ -31,7 +31,7 @@ const itemAnimation = {
   visible: {
     opacity: 1,
     y: 0,
-    transition: { duration: 0.4, ease: [0.22, 1, 0.36, 1] },
+    transition: { duration: 0.4, ease: [0.22, 1, 0.36, 1] as const },
   },
 };
 
@@ -117,7 +117,7 @@ export default function ForgotPasswordPage() {
             key="success"
             initial={{ opacity: 0, y: 12 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
+            transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] as const }}
           >
             {/* Success state */}
             <div className="border border-graphite-200 bg-graphite-50 px-5 py-6">
