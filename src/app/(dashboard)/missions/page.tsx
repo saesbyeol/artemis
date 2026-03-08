@@ -25,7 +25,7 @@ const container = {
 
 const item = {
   hidden: { opacity: 0, y: 12 },
-  show: { opacity: 1, y: 0, transition: { duration: 0.4, ease: "easeOut" } },
+  show: { opacity: 1, y: 0, transition: { duration: 0.4, ease: "easeOut" as const } },
 };
 
 type MissionStatus = "Active" | "Paused" | "Completed" | "Planning";
@@ -134,7 +134,7 @@ function ProgressBar({ progress }: { progress: number }) {
       <motion.div
         initial={{ width: 0 }}
         animate={{ width: `${progress}%` }}
-        transition={{ duration: 1, ease: "easeOut" }}
+        transition={{ duration: 1, ease: "easeOut" as const }}
         className={`h-full rounded-full ${
           progress === 100
             ? "bg-success"

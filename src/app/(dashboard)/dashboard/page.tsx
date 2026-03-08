@@ -32,7 +32,7 @@ const container = {
 
 const item = {
   hidden: { opacity: 0, y: 12 },
-  show: { opacity: 1, y: 0, transition: { duration: 0.4, ease: "easeOut" } },
+  show: { opacity: 1, y: 0, transition: { duration: 0.4, ease: "easeOut" as const } },
 };
 
 const metrics = [
@@ -126,7 +126,7 @@ function TelemetryBar({ label, value, maxValue, delay }: { label: string; value:
         <motion.div
           initial={{ width: 0 }}
           animate={{ width: `${(value / maxValue) * 100}%` }}
-          transition={{ duration: 1.2, delay, ease: "easeOut" }}
+          transition={{ duration: 1.2, delay, ease: "easeOut" as const }}
           className="h-full bg-graphite-800 rounded-sm relative"
         >
           <div className="absolute inset-0 bg-gradient-to-r from-transparent to-white/10" />

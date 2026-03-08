@@ -28,7 +28,7 @@ const container = {
 
 const item = {
   hidden: { opacity: 0, y: 12 },
-  show: { opacity: 1, y: 0, transition: { duration: 0.4, ease: "easeOut" } },
+  show: { opacity: 1, y: 0, transition: { duration: 0.4, ease: "easeOut" as const } },
 };
 
 type ZoneStatus = "Active" | "Standby" | "Alert";
@@ -192,7 +192,7 @@ export default function OperationsPage() {
                     <motion.div
                       initial={{ width: 0 }}
                       animate={{ width: `${percent}%` }}
-                      transition={{ duration: 1, ease: "easeOut" }}
+                      transition={{ duration: 1, ease: "easeOut" as const }}
                       className={`h-full rounded-full ${
                         percent > 90 ? "bg-danger" : percent > 75 ? "bg-warning" : "bg-graphite-800"
                       }`}

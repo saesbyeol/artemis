@@ -138,7 +138,7 @@ function HeroSection() {
       >
         <motion.div
           animate={{ y: [0, 8, 0] }}
-          transition={{ repeat: Infinity, duration: 2, ease: "easeInOut" }}
+          transition={{ repeat: Infinity, duration: 2, ease: "easeInOut" as const }}
           className="w-5 h-8 border-2 border-graphite-300 rounded-full flex justify-center pt-1.5"
         >
           <div className="w-1 h-2 bg-graphite-400 rounded-full" />
@@ -578,7 +578,7 @@ function MissionSection() {
                         }
                       : {}
                   }
-                  transition={{ repeat: Infinity, duration: 3, ease: "easeInOut" }}
+                  transition={{ repeat: Infinity, duration: 3, ease: "easeInOut" as const }}
                   className="absolute top-1/3 left-1/4 w-32 h-32 border border-graphite-300 rounded-full"
                 />
                 <motion.div
@@ -593,7 +593,7 @@ function MissionSection() {
                   transition={{
                     repeat: Infinity,
                     duration: 4,
-                    ease: "easeInOut",
+                    ease: "easeInOut" as const,
                     delay: 1,
                   }}
                   className="absolute top-1/2 right-1/3 w-24 h-24 border border-graphite-300 rounded-full"

@@ -101,7 +101,7 @@ export function GridBackground({
                 duration: 4,
                 delay: point.delay % 3,
                 repeat: Infinity,
-                ease: "easeInOut",
+                ease: "easeInOut" as const,
               }}
             />
           )
